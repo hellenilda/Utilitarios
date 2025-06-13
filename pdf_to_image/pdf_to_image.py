@@ -9,14 +9,14 @@ def pdf_to_images(pdf_path, output_folder, fmt='png', dpi=200):
         os.makedirs(output_folder)
     
     # Caminho para o Poppler (ajuste conforme sua instalação)
-    poppler_path = r"C:\poppler\poppler-23.11.0\bin"
+    poppler_path = r"C:\poppler-24.08.0\Library\bin"
     
     # Converter PDF em imagens
     images = convert_from_path(
         pdf_path,
         dpi=dpi,
         fmt=fmt,
-        poppler_path=poppler_path  # <<< E AQUI
+        poppler_path=poppler_path 
     )
     
     # Salvar cada página como imagem
